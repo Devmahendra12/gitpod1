@@ -149,7 +149,9 @@ export default function App() {
             <button style={styles.controlButton}
               onClick={() => {
                 if (selectedFile){
-                  window.open(selectedFile.path, "_blank")
+                  const newFiles = myFiles.filter(file => file.id !== selectedFile.id);
+                  setMyFiles(newFiles)
+                  setSelectedFile(null)
                 }
               }}
             >Delete</button>
