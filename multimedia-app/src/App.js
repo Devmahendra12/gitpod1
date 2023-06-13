@@ -144,13 +144,13 @@ export default function App() {
                 if (selectedFile){
                   window.open(selectedFile.path, "_blank")
                 }
-              }}
+              }}q2
             >Download</button>
             <button style={styles.controlButton}
               onClick={() => {
                 if (selectedFile){
-                  const newFiles = myFiles.filter(file => file.id !== selectedFile.id);
-                  setMyFiles(newFiles)
+                  const delFiles = myFiles.filter(file => file.id !== selectedFile.id);
+                  setMyFiles(delFiles)
                   setSelectedFile(null)
                 }
               }}
